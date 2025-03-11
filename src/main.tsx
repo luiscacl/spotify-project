@@ -14,7 +14,7 @@ if (!PUBLISHABLE_KEY) {
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
-      <BrowserRouter basename="/spotify-project/">
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </ClerkProvider>

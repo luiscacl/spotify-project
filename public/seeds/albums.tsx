@@ -39,4 +39,3 @@ export const albums: Album[] = [
     songs: songs.filter((song) => song.albumId === "album_04"),
   },
 ];
-console.log(albums);

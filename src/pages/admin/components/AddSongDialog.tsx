@@ -16,7 +16,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-// import { axiosInstance } from "@/lib/axios";
 import { useMusicStore } from "@/stores/useMusicStore";
 import { Plus, Upload } from "lucide-react";
 import { useRef, useState } from "react";
@@ -32,7 +31,6 @@ interface NewSong {
 const AddSongDialog = () => {
   const { albums } = useMusicStore();
   const [songDialogOpen, setSongDialogOpen] = useState(false);
-  //   const [isLoading, setIsLoading] = useState(false);
 
   const [newSong, setNewSong] = useState<NewSong>({
     title: "",
@@ -53,7 +51,6 @@ const AddSongDialog = () => {
   const imageInputRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = () => {
-    // try {
     if (!files.audio || !files.image) {
       return toast.error("Please upload both audio and image files");
     }
@@ -70,13 +67,6 @@ const AddSongDialog = () => {
     formData.append("audioFile", files.audio);
     formData.append("imageFile", files.image);
 
-    // await axiosInstance.post("/admin/songs", formData, {
-    // 	headers: {
-    // 		"Content-Type": "multipart/form-data",
-    // 	},
-    // });
-    console.log(formData);
-
     setNewSong({
       title: "",
       artist: "",
@@ -89,10 +79,6 @@ const AddSongDialog = () => {
       image: null,
     });
     toast.success("Song added successfully");
-    // } catch (error: any) {
-    // 	toast.error("Failed to add song: " + error.message);
-    // } finally {
-    // }
   };
 
   return (
