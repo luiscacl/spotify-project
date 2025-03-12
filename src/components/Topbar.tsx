@@ -13,7 +13,7 @@ const Topbar = () => {
     >
       <div className="flex gap-2 items-center">
         <img
-          src="../../public/spotify.png"
+          src="https://res.cloudinary.com/dftslwu7s/image/upload/v1741793311/songs_images/spotigyImg.png"
           className="size-8"
           alt="Spotify logo"
         />

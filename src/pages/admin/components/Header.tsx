@@ -7,7 +7,7 @@ const Header = () => {
       <div className="flex items-center gap-3 mb-8">
         <Link to="/" className="rounded-lg">
           <img
-            src="../../../../public/spotify.png"
+            src="https://res.cloudinary.com/dftslwu7s/image/upload/v1741793311/songs_images/spotigyImg.png"
             className="size-10 text-black"
           />
         </Link>
